@@ -1,4 +1,3 @@
-import argparse 
 import csv 
 
 class Simulate_Server: 
@@ -47,9 +46,4 @@ def simulateOneServer(filename):
         print(server.current_request.request_time, server.current_request.file_name, server.current_request.duration)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--file", help="csv file path", type=str, required=True)
-    parser.add_argument("--servers", help="simulate multiple servers", type=str)
-    args = parser.parse_args()
-    
-    simulateOneServer(args.file)
+    simulateOneServer("requests.csv")
